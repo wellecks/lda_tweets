@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <style type="text/css">
+
+text {
+  font-size: 11px;
+  pointer-events: none;
+}
+
+text.parent {
+  fill: #1f77b4;
+}
+
+circle {
+  fill: #ccc;
+  stroke: #999;
+  pointer-events: all;
+}
+
+circle.parent {
+  fill: #1f77b4;
+  fill-opacity: .1;
+  stroke: steelblue;
+}
+
+circle.parent:hover {
+  stroke: #ff7f0e;
+  stroke-width: .5px;
+}
+
+circle.child {
+  pointer-events: none;
+}
+
+    </style>
+  </head>
+  <body>
+    <h2>
+      LDA topics<br>
+      for tweets<br>
+      
+      <select placeholder="username" id="select_in" 
+              onchange='show(document.getElementById("select_in").value)'>
+        <option>select a user</option>
+        <option>nytimes</option>
+        <option>BarackObama</option>
+        <option>elonmusk</option>
+        <option>gvanrossum</option>
+        <option>hackernewsbot</option>
+        <option>KingJames</option>
+        <option>neiltyson</option>
+        <option>realDonaldTrump</option>
+        <option>Techmeme</option>
+        <option>paulg</option>
+      </select>
+      <br />
+<!--       <input placeholder="type a user" id="text_in" type="text"></input>
+      <button onclick='show(document.getElementById("text_in").value)'>show</button> -->
+    </h2>
+
+    <script type="text/javascript" src="d3/d3.js"></script>
+    <script type="text/javascript" src="d3/d3.layout.js"></script>
+    <script type="text/javascript" src="js/viz.js"></script>
+
+  </body>
+</html>
